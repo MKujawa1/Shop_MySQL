@@ -3,7 +3,7 @@ from database import Database
 # Connection params
 host = 'localhost'
 user = 'Maciej'
-passwd = 'passwd'
+passwd = 'password'
 # Database param
 database = 'Shop'
 # Tables params
