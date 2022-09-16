@@ -32,12 +32,15 @@ class Insert(Database):
     def __init__(self, host, user, passwd, database = ''):
         super().__init__(host, user, passwd, database)
         
-    def insert_into_client(self, ):
-        pass
+    def insert_into_client(self, name,surname,email,city):
+        sql_query = "INSERT INTO client (name,surname,email,city) VALUES (%s,%s,%s,%s)"
+        self.cursor.execute(sql_query,(name,surname,email,city))
     
-    def insert_into_product(self, ):
-        pass
+    def insert_into_product(self, name, price):
+        sql_query = "INSERT INTO product (name,price) VALUES (%s,%s)"
+        self.cursor.execute(sql_query,(name,price))
     
-    def insert_into_orders(self, ):
-        pass
+    def insert_into_orders(self, clientId, productId, date, status):
+        sql_query = "INSERT INTO product (clientId,productId,date,status) VALUES (%s,%s,%s,%s)"
+        self.cursor.execute(sql_query,(clientId,productId,date,status))
         
