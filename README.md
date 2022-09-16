@@ -2,5 +2,5 @@
 Create and manage shop database with MySQL in Python
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/99027230/190636123-f15903a3-eb4a-408f-8067-b5505bfecc79.png" alt="Sublime's custom image"/>
+  <img src="(https://user-images.githubusercontent.com/99027230/190636802-84c0c89c-db10-4676-8f33-92fefabb0ce2.png)" alt="Database"/>
 </p>
