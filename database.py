@@ -15,7 +15,7 @@ class Database:
         self.db.commit()
    
     def create_table(self,table_name,variables):
-        sql_query = f"CREATE TABLE IF NOT EXISTS {table_name} ({variables})"
+        sql_query = f"CREATE TABLE {table_name} ({variables})"
         self.cursor.execute(sql_query)
         self.db.commit()
        
