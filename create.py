@@ -23,12 +23,14 @@ clientId int NOT NULL, FOREIGN KEY(clientId) REFERENCES client(Id),\
 productId int NOT NULL, FOREIGN KEY(productId) REFERENCES product(Id),\
 date datetime NOT NULL,\
 status VARCHAR(50)'
-
+ 
 db = Database(host=host,user=user,passwd = passwd)
+db.connect()
 db.create_database(database)
 db.cursor.execute("SHOW DATABASES")
 db.cursor.fetchall()
 db = Database(host=host,user=user,passwd = passwd,database = database)
+db.connect()
 db.create_table(client_table_name,client_table_variables)
 db.create_table(product_table_name,product_table_variables)
 db.create_table(order_table_name,order_table_variables)
