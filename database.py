@@ -35,12 +35,15 @@ class Insert(Database):
     def insert_into_client(self, name,surname,email,city):
         sql_query = "INSERT INTO client (name,surname,email,city) VALUES (%s,%s,%s,%s)"
         self.cursor.execute(sql_query,(name,surname,email,city))
+        self.db.commit()
     
     def insert_into_product(self, name, price):
         sql_query = "INSERT INTO product (name,price) VALUES (%s,%s)"
         self.cursor.execute(sql_query,(name,price))
+        self.db.commit()
     
     def insert_into_orders(self, clientId, productId, date, status):
-        sql_query = "INSERT INTO product (clientId,productId,date,status) VALUES (%s,%s,%s,%s)"
+        sql_query = "INSERT INTO orders (clientId,productId,date,status) VALUES (%s,%s,%s,%s)"
         self.cursor.execute(sql_query,(clientId,productId,date,status))
+        self.db.commit()
         
