@@ -12,4 +12,4 @@ Create and manage shop database with MySQL in Python - in progress
 * product - id, name, price
 * orders - id, clientId, productId, date, status. clientId and productId are foreign keys in orders table.
 
-**manage.py** - this file is for adding records to tables and reading them.  
+**manage.py** - this file is for adding records to tables and reading them. Added the ability to group statuses and count them. Displaying the names of customers, the names of products that currently have the status 'Oczekuje'. Determining and displaying the amount, name and surname of the customer with the highest total order value.
